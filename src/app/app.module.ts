@@ -11,7 +11,6 @@ import { AuthenticationModule } from './Authentication/authentication.module';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    FormsModule,
     AppRoutingModule,
     AuthenticationModule
   ],
