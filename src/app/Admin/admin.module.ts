@@ -8,6 +8,8 @@ import { CheckboxModule } from 'primeng/checkbox';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { DropdownModule } from 'primeng/dropdown';
 import { InputTextareaModule } from 'primeng/inputtextarea';
+import {CalendarModule} from 'primeng/calendar';
+
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -21,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     ButtonModule,
     RadioButtonModule,
     InputTextareaModule,
-    DropdownModule
+    DropdownModule,
+    CalendarModule
   ],
   declarations: [DataGeneratorComponent]
 })

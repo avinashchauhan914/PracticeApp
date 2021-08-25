@@ -1,31 +1,54 @@
 <div class="card">
-<h5>Advanced</h5>
-<div class="p-fluid p-formgrid p-grid">
-  <div class="p-field p-col-12 p-md-6">
-    <label for="firstname6">Firstname</label>
-    <input id="firstname6" type="text" pInputText />
-  </div>
-  <div class="p-field p-col-12 p-md-6">
-    <label for="lastname6">Lastname</label>
-    <input id="lastname6" type="text" pInputText />
-  </div>
-  <div class="p-field p-col-12">
-    <label for="address">Address</label>
-    <textarea id="address" type="text" rows="4" pInputTextarea></textarea>
-  </div>
-  <div class="p-field p-col-12 p-md-6">
-    <label for="city">City</label>
-    <input id="city" type="text" pInputText />
-  </div>
-  <div class="p-field p-col-12 p-md-3">
-    <label for="state">State</label>
-    <p-dropdown inputId="state" [options]="states" [(ngModel)]="selectedState" placeholder="Select"
-      optionLabel="name"></p-dropdown>
-  </div>
-  <div class="p-field p-col-12 p-md-3">
-    <label for="zip">Zip</label>
-    <input id="zip" type="text" pInputText />
-  </div>
+  <h5>Data Generator</h5>
+  <div class="p-fluid p-formgrid p-grid">
+    <div class="p-field p-col-12 p-md-6">
+      <label for="Id">Id</label>
+      <input id="Id" type="text" pInputText [(ngModel)]="datageneratormodel.id" />
+    </div>
+    <div class="p-field p-col-12 p-md-6">
+      <label for="brand-Name">Brand Name</label>
+      <input id="brand-Name" type="text" pInputText [(ngModel)]="datageneratormodel.brandName" />
+    </div>
+    <div class="p-field p-col-12 p-md-3">
+      <label for="qty">Quantity</label>
+      <p-dropdown inputId="qty" [options]="quantities" [(ngModel)]="datageneratormodel.quantity"
+        placeholder="Select Quantity" optionLabel="name"></p-dropdown>
+    </div>
+    <div class="p-field p-col-12 p-md-6">
+      <label for="brand-Price">Brand Price</label>
+      <input id="brand-Price" type="text" pInputText [(ngModel)]="datageneratormodel.brandPrice" />
+    </div>
+    <div class="p-field p-col-12 p-md-6">
+      <label for="travel-Expense">Travel Expense</label>
+      <input id="travel-Expense" type="text" pInputText [(ngModel)]="datageneratormodel.travelExpense" />
+    </div>
+    <div class="p-field p-col-12 p-md-6">
+      <label for="total-Expense">Total Expense</label>
+      <input id="total-Expense" type="text" pInputText [(ngModel)]="datageneratormodel.totalExpense" />
+    </div>
+    <div class="p-field p-col-12 p-md-6">
+      <label for="sale-Price">Sale Price</label>
+      <input id="sale-Price" type="text" pInputText [(ngModel)]="datageneratormodel.salePrice" />
+    </div>
+    <div class="p-field p-col-12 p-md-6">
+      <label for="minimum-SalePrice">Minimum Sale Price</label>
+      <input id="minimum-SalePrice" type="text" pInputText [(ngModel)]="datageneratormodel.minimumSalePrice"/>
+    </div>
+    <div class="p-field p-col-12 p-md-4">
+      <label for="arrival-Date">Arrival Date</label>
+      <p-calendar [(ngModel)]="datageneratormodel.arrivalDate" dateFormat="dd-mm-yy" [showIcon]="true" inputId="icon">
+      </p-calendar>
+    </div>
 
+  </div>
 </div>
-</div>
+
+{{datageneratormodel.id}}
+{{datageneratormodel.brandName}}
+{{datageneratormodel.brandPrice}}
+{{datageneratormodel.quantity}}
+{{datageneratormodel.travelExpense}}
+{{datageneratormodel.totalExpense}}
+{{datageneratormodel.salePrice}}
+{{datageneratormodel.minimumSalePrice}}
+{{datageneratormodel.arrivalDate}}
