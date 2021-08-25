@@ -1,7 +1,8 @@
 export class DataGenerator {
   id: string;
   brandName: string;
-  quantity: string;
+  quantity: number;
+  measure: string;
   brandPrice: number;
   travelExpense: number;
   totalExpense: number;
