@@ -6,7 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./data-generator.component.css']
 })
 export class DataGeneratorComponent implements OnInit {
+  selectedState: any = null;
 
+  states: any[] = [
+      {name: 'Arizona', code: 'Arizona'},
+      {name: 'California', value: 'California'},
+      {name: 'Florida', code: 'Florida'},
+      {name: 'Ohio', code: 'Ohio'},
+      {name: 'Washington', code: 'Washington'}
+  ];
   constructor() { }
 
   ngOnInit() {
