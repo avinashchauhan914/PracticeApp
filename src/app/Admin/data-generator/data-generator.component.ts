@@ -7,7 +7,8 @@ import { DataGenerator } from '../../Admin/models/data-generator.model';
   styleUrls: ['./data-generator.component.css']
 })
 export class DataGeneratorComponent implements OnInit {
-public datageneratormodel: DataGenerator;
+  public datageneratormodel: DataGenerator;
+  public selectedQuantity: string;
 
   quantities: any[] = [
     { name: '500 gm' },
@@ -26,4 +27,28 @@ public datageneratormodel: DataGenerator;
   }
 
   ngOnInit() {}
+
+  submitData() {
+    this.datageneratormodel.quantity = this.selectedQuantity;
+    this.datageneratormodel.qty = Number(
+      this.datageneratormodel.quantity['name'].match(/\d+/g)
+    );
+    this.datageneratormodel.brandPrice = Number(
+      this.datageneratormodel.brandPrice
+    );
+    this.datageneratormodel.travelExpense = Number(
+      this.datageneratormodel.travelExpense
+    );
+    this.datageneratormodel.minimumSalePrice = Number(
+      this.datageneratormodel.minimumSalePrice
+    );
+    this.datageneratormodel.salePrice = Number(
+      this.datageneratormodel.salePrice
+    );
+    this.datageneratormodel.totalExpense =
+      this.datageneratormodel.brandPrice +
+      this.datageneratormodel.travelExpense;
+    console.log(this.datageneratormodel);
+  }
+  /* to get string from mixed data.  this.datageneratormodel.quantity['name'].match(/[a-zA-Z]+/g);*/
 }

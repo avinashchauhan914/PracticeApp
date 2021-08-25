@@ -5,7 +5,8 @@ export class DataGenerator {
   brandPrice: number;
   travelExpense: number;
   totalExpense: number;
-  salePrice: number
+  salePrice: number;
   minimumSalePrice: number;
   arrivalDate: Date;
+  qty: number;
 }

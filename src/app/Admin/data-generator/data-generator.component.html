@@ -11,8 +11,8 @@
     </div>
     <div class="p-field p-col-12 p-md-3">
       <label for="qty">Quantity</label>
-      <p-dropdown inputId="qty" [options]="quantities" [(ngModel)]="datageneratormodel.quantity"
-        placeholder="Select Quantity" optionLabel="name"></p-dropdown>
+      <p-dropdown inputId="qty" [options]="quantities" [(ngModel)]="selectedQuantity" placeholder="Select Quantity"
+        optionLabel="name"></p-dropdown>
     </div>
     <div class="p-field p-col-12 p-md-6">
       <label for="brand-Price">Brand Price</label>
@@ -43,12 +43,4 @@
   </div>
 </div>
 
-{{datageneratormodel.id}}
-{{datageneratormodel.brandName}}
-{{datageneratormodel.brandPrice}}
-{{datageneratormodel.quantity}}
-{{datageneratormodel.travelExpense}}
-{{datageneratormodel.totalExpense}}
-{{datageneratormodel.salePrice}}
-{{datageneratormodel.minimumSalePrice}}
-{{datageneratormodel.arrivalDate}}
+<button (click)="submitData()">submit</button>
