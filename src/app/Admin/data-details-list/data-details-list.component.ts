@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataGenerator } from '../../Admin/models/data-generator.model';
+import { products } from '../../Admin/product';
 
 @Component({
   selector: 'app-data-details-list',
@@ -7,13 +7,9 @@ import { DataGenerator } from '../../Admin/models/data-generator.model';
   styleUrls: ['./data-details-list.component.css']
 })
 export class DataDetailsListComponent implements OnInit {
-  public responseDataList: DataGenerator[] = [];
-
-  cols: DataGenerator[];
+  public gridData: any[] = products;
 
   constructor() {}
 
-  ngOnInit() {
-    // this.productService.getProductsSmall().then(data => this.products = data);
-  }
+  ngOnInit() {}
 }

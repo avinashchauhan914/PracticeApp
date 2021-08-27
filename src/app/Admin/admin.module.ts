@@ -11,6 +11,8 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
 import { CalendarModule } from 'primeng/calendar';
 import { TableModule } from 'primeng/table';
 
+import { GridModule } from '@progress/kendo-angular-grid';
+
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -26,7 +28,8 @@ import { HttpClientModule } from '@angular/common/http';
     InputTextareaModule,
     DropdownModule,
     CalendarModule,
-    TableModule
+    TableModule,
+    GridModule
   ],
   declarations: [DataGeneratorComponent]
 })
